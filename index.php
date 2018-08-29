@@ -27,14 +27,15 @@
 			<br/>
 			<br/>
 			
-			<table id="balti-table">
+			
+				<?php 
+				/*<table id="balti-table">
 				<tr>
 					<td>Id</td>
 					<td>Nume</td>
 					<td>Locatie</td>
 					<td>Capacitate</td>
 				</tr>
-				<?php 
 				include 'php/getbalti.php';
 				echo "<br/>";
 				echo "<br/>";
@@ -46,13 +47,13 @@
 							<td>'.$res['capacitate_balta'].'</td>';
 					echo '</tr>';
 				}
+				</table>*/
 				
 				include 'php/geteventstable.php';
 				
 			 
 			?>
-			</table>
-			
+				
 		</div>
 		
 		<footer id="in-footer">
