@@ -1,0 +1,23 @@
+#in-nav {
+	height: 5%;
+	margin: 0 auto;
+	width: 85%;
+	background: #ececec;
+}
+
+#in-nav ul{
+	width: 100%;
+	height: 100%;
+	list-style: none;
+}
+
+#in-nav ul li{	
+	width: 25%;
+	float: left;
+	height: 100%;
+	text-align: center;
+}
+
+#in-nav ul li a {
+	text-decoration: none;
+}

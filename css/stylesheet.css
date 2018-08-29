@@ -1,0 +1,41 @@
+@import url("nav.css"); /* Using a url */
+@import url("index.css"); /* Using a url */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+#in-head-of-page {
+	width: 90%;
+	background: #cecece;
+	margin: 0 auto;
+	height: calc(20% - 30px);
+	padding-top: 30px;
+	text-align: center;
+	font-size: 60px;
+}
+
+#in-main-part-of-page {
+	width: calc(80% - 30px); 
+	background: #ececec;
+	margin: 20px auto 0;
+	padding: 15px;
+}
+
+#in-footer {
+	width: calc(80% - 30px); 
+	height: 50px);
+	border-top: 1px solid #cecece;
+	margin: 0 auto 15px;
+	padding: 15px;
+	background: #ececec;
+}
