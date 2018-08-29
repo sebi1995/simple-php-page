@@ -1,5 +1,6 @@
 @import url("nav.css"); /* Using a url */
-@import url("index.css"); /* Using a url */
+@import url("page-specific/index.css"); /* Using a url */
+@import url("page-specific/events.css"); /* Using a url */
 
 * {
 	margin: 0;
@@ -22,6 +23,8 @@ body {
 	padding-top: 30px;
 	text-align: center;
 	font-size: 60px;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
 }
 
 #in-main-part-of-page {

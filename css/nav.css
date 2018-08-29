@@ -1,8 +1,10 @@
 #in-nav {
-	height: 5%;
+	height: 30px;
 	margin: 0 auto;
 	width: 85%;
 	background: #ececec;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
 }
 
 #in-nav ul{
@@ -20,4 +22,19 @@
 
 #in-nav ul li a {
 	text-decoration: none;
+	width:100%;
+	font-size: 20px;
+	height:100%;
+}
+
+#in-nav ul li a span{ 
+	width:100%;
+	display: block;
+	height:100%;
+}
+
+#nav-selected-page-decor {
+	background: #cecece;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
 }
