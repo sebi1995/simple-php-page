@@ -1,9 +1,9 @@
 CREATE SCHEMA `eventsdb` ;
 
-CREATE TABLE `eventsdb`.`events_table` (
+ CREATE TABLE `eventsdb`.`events_table` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `events_name_text` VARCHAR(45) NULL,
-  `events_url` VARCHAR(45) NULL,
+  `events_url` VARCHAR(1000) NULL,
   `events_start_timezone` VARCHAR(45) NULL,
   `events_start_local` VARCHAR(45) NULL,
   `events_start_utc` VARCHAR(45) NULL,
@@ -12,9 +12,8 @@ CREATE TABLE `eventsdb`.`events_table` (
   `events_end_utc` VARCHAR(45) NULL,
   `events_created` VARCHAR(45) NULL,
   `events_changed` VARCHAR(45) NULL,
-  `events_status` VARCHAR(45) NULL,
-  `events_is_free` INT NULL,
-  `events_currency` VARCHAR(45) NULL,
+  `events_capacity` VARCHAR(45) NULL,
+  `events_status` VARCHAR(45) NULL, 
   PRIMARY KEY (`id`));
   
   

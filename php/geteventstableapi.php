@@ -1,9 +1,11 @@
 <?php
-function getDataTables($timeZoneDropDownOption){
-$res = json_decode(file_get_contents("https://www.eventbriteapi.com/v3/events/search/?q=bucharest&token=NPPPSRKGFIVSF3JOKWFU"),true);			
- 
-$in = 0;
-$returnStr = "";
+function getDataFromAPI($timeZoneDropDownOption){
+	
+	$res = json_decode(file_get_contents("https://www.eventbriteapi.com/v3/events/search/?q=bucharest&token=NPPPSRKGFIVSF3JOKWFU"),true);			
+	 
+	$in = 0;
+	$returnStr = "";
+	
 	while($in < ($res["pagination"]["page_size"]-1) && $res["events"][$in] != null){
 
 		##########################################################
@@ -22,9 +24,7 @@ $returnStr = "";
 		$event_created_date = $res["events"][$in]["created"];
 		$event_changed_date = $res["events"][$in]["changed"];
 		$event_capacity = $res["events"][$in]["capacity"];
-		$event_status = $res["events"][$in]["status"];
-		$event_is_free = $res["events"][$in]["is_free"];
-		$event_currency = $res["events"][$in++]["currency"];
+		$event_status = $res["events"][$in++]["status"]; 
 		
 		##########################################################
 		#	Custom
@@ -41,10 +41,10 @@ $returnStr = "";
 		#	utc time
 		
 		$eventUTCStartDate = substr($event_start_utc, 0, 10);
-		$eventUTCStartTime = substr($event_start_utc, 11, 19);
+		$eventUTCStartTime = substr($event_start_utc, 11, 8);
 		
 		$eventUTCEndDate = substr($event_end_utc, 0, 10);
-		$eventUTCEndTime = substr($event_end_utc, 11, 19);
+		$eventUTCEndTime = substr($event_end_utc, 11, 8);
 		
 		##########################################################
 		#	local custom date
@@ -153,19 +153,7 @@ $returnStr = "";
 					<td>
 						".($event_capacity = ($event_capacity == null) ? "Not specified" : $event_capacity)
 					."</td>
-				</tr>
-				<tr>
-					<th>
-						Event price: 
-					</th>
-					<td>
-						";
-		if($event_is_free == null || $event_is_free == 0){
-			$event_is_free = "Free";
-		} else {$event_is_free = $event_is_free . " " . $event_currency;}
-		$returnStr = $returnStr . $event_is_free.
-					"</td>
-				</tr>
+				</tr> 
 				<tr>
 					<th>
 						Event status: 

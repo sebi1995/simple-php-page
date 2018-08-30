@@ -36,11 +36,12 @@
 				switch($data_location){
 					case'sql':{
 						include "php/geteventstablesql.php";
+						echo getDataFromSQL($timezone);
 						break;
 					}
 					case'api':{
 						include "php/geteventstableapi.php";
-						echo getDataTables($timezone);
+						echo getDataFromAPI($timezone);
 						break;
 						
 					}
